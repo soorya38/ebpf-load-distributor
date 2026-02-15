@@ -1,0 +1,13 @@
+services:
+  ebpf-lab:
+    image: ubuntu:22.04
+    container_name: ebpf-lab
+    privileged: true
+    stdin_open: true
+    tty: true
+
+    volumes:
+      - ./ebpf:/workspace
+
+    command: tail -f /dev/null
+
